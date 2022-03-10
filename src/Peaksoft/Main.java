@@ -7,17 +7,17 @@ import java.util.Locale;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         LinkedList<Client> linkedList = new LinkedList<>();
 
-        linkedList.add(new Client("Altin","Notebook",1));
-        linkedList.add(new Client("Bakyt","Bread",3));
-        linkedList.add(new Client("Camat","Pencil",10));
-        linkedList.add(new Client("Sultan","Fish",5));
-        linkedList.add(new Client("Aynura","Chocolate",2));
-        linkedList.add(new Client("Kanykei","Cola",8));
-        linkedList.add(new Client("Musab","Glue",15));
-        linkedList.add(new Client("Umar","Mobile Phone",1));
+        linkedList.add(new Client("Altin", "Notebook", 1));
+        linkedList.add(new Client("Bakyt", "Bread", 3));
+        linkedList.add(new Client("Camat", "Pencil", 10));
+        linkedList.add(new Client("Sultan", "Fish", 5));
+        linkedList.add(new Client("Aynura", "Chocolate", 2));
+        linkedList.add(new Client("Kanykei", "Cola", 8));
+        linkedList.add(new Client("Musab", "Glue", 15));
+        linkedList.add(new Client("Umar", "Mobile Phone", 1));
 
         printLinkedList(linkedList);
 
@@ -39,10 +39,10 @@ public class Main {
         }
     }
 
-    private static LinkedList<Client> sortByName (LinkedList<Client> linkedList) {
+    private static LinkedList<Client> sortByName(LinkedList<Client> linkedList) {
         LinkedList<Client> sortName = new LinkedList<>();
         for (Client sorted : linkedList) {
-            if (sorted.getName().charAt(0) == 'A'){
+            if (sorted.getName().charAt(0) == 'A') {
                 sortName.add(sorted);
             } else if (sorted.getName().charAt(0) == 'B') {
                 sortName.add(sorted);
@@ -52,7 +52,7 @@ public class Main {
         return sortName;
     }
 
-    private static LinkedList<Client> moreThanFiveItem (LinkedList<Client> linkedList) {
+    private static LinkedList<Client> moreThanFiveItem(LinkedList<Client> linkedList) {
         LinkedList<Client> moreItem = new LinkedList<>();
         for (Client item : linkedList) {
             if (item.getAmount() >= 5) {
